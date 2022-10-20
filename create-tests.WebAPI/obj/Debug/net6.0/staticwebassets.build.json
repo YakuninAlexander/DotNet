@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "vWdyZLm53BjDWVhghVG5SnkuwjJDC8HlYuJAkts8gog=",
+  "Source": "create-tests.WebAPI",
+  "BasePath": "_content/create-tests.WebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
