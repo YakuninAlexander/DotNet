@@ -5,7 +5,7 @@ using create_test.Entities.Models;
 using create_test.Repository;
 using Microsoft.AspNetCore.Mvc;
 
-namespace TrainTimetable.WebAPI.Controllers
+namespace create_tests.WebAPI.Controllers
 {
     /// <summary>
     /// Doctors endpoints
@@ -19,7 +19,7 @@ namespace TrainTimetable.WebAPI.Controllers
         private IRepository<User> _repository;
 
         /// <summary>
-        /// Trains controller
+        /// Users controller
         /// </summary>
         public UsersController(IRepository<User> repository)
         {
@@ -27,7 +27,7 @@ namespace TrainTimetable.WebAPI.Controllers
         }
 
         /// <summary>
-        /// Get trains
+        /// Get users
         /// </summary>
         /// <returns></returns>
         [HttpGet]

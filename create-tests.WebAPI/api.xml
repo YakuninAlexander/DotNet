@@ -44,17 +44,17 @@
             </summary>
             <param name="services"></param>
         </member>
-        <member name="T:TrainTimetable.WebAPI.Controllers.TrainsController">
+        <member name="T:TrainTimetable.WebAPI.Controllers.UsersController">
             <summary>
             Doctors endpoints
             </summary>
         </member>
-        <member name="M:TrainTimetable.WebAPI.Controllers.TrainsController.#ctor(create_test.Repository.IRepository{create_test.Entities.Models.User})">
+        <member name="M:TrainTimetable.WebAPI.Controllers.UsersController.#ctor(create_test.Repository.IRepository{create_test.Entities.Models.User})">
             <summary>
             Trains controller
             </summary>
         </member>
-        <member name="M:TrainTimetable.WebAPI.Controllers.TrainsController.GetTrains">
+        <member name="M:TrainTimetable.WebAPI.Controllers.UsersController.GetUsers">
             <summary>
             Get trains
             </summary>
