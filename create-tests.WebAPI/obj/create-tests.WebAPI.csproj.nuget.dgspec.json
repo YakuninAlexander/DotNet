@@ -4,14 +4,14 @@
     "/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-tests.WebAPI/create-tests.WebAPI.csproj": {}
   },
   "projects": {
-    "/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-tests.WebAPI/create-tests.WebAPI.csproj": {
+    "/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-test.Entities/create-test.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-tests.WebAPI/create-tests.WebAPI.csproj",
-        "projectName": "create-tests.WebAPI",
-        "projectPath": "/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-tests.WebAPI/create-tests.WebAPI.csproj",
+        "projectUniqueName": "/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-test.Entities/create-test.Entities.csproj",
+        "projectName": "create-test.Entities",
+        "projectPath": "/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-test.Entities/create-test.Entities.csproj",
         "packagesPath": "/Users/alexander/.nuget/packages/",
-        "outputPath": "/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-tests.WebAPI/obj/",
+        "outputPath": "/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-test.Entities/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/alexander/.nuget/NuGet/NuGet.Config"
@@ -38,9 +38,174 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[6.0.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-test.Repository/create-test.Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-test.Repository/create-test.Repository.csproj",
+        "projectName": "create-test.Repository",
+        "projectPath": "/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-test.Repository/create-test.Repository.csproj",
+        "packagesPath": "/Users/alexander/.nuget/packages/",
+        "outputPath": "/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-test.Repository/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/alexander/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-test.Entities/create-test.Entities.csproj": {
+                "projectPath": "/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-test.Entities/create-test.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-tests.WebAPI/create-tests.WebAPI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-tests.WebAPI/create-tests.WebAPI.csproj",
+        "projectName": "create-tests.WebAPI",
+        "projectPath": "/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-tests.WebAPI/create-tests.WebAPI.csproj",
+        "packagesPath": "/Users/alexander/.nuget/packages/",
+        "outputPath": "/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-tests.WebAPI/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/alexander/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-test.Entities/create-test.Entities.csproj": {
+                "projectPath": "/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-test.Entities/create-test.Entities.csproj"
+              },
+              "/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-test.Repository/create-test.Repository.csproj": {
+                "projectPath": "/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-test.Repository/create-test.Repository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
             "Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer": {
               "target": "Package",
               "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Proxies": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[6.0.7, )"
             },
             "Serilog.AspNetCore": {
               "target": "Package",

@@ -1,6 +1,6 @@
 using Serilog;
 
-namespace Clinic.WebAPI.AppConfigure.ApplicationExtensions
+namespace create_tests.WebAPI.AppConfiguration.ApplicationExtensions
 {
   public static partial class AppExtensions
   {

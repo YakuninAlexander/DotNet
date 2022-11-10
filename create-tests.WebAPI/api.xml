@@ -4,16 +4,16 @@
         <name>create-tests.WebAPI</name>
     </assembly>
     <members>
-        <member name="M:Clinic.WebAPI.AppConfigure.ApplicationExtensions.AppExtensions.UseSerilogConfiguration(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
-            <summary>
-            Use serilog configuration
-            </summary>
-            <param name="app"></param>
-        </member>
         <member name="T:create_tests.WebAPI.AppConfiguration.ApplicationExtensions.AppExtensions">
             <summary>
             Application builder extensions
             </summary>
+        </member>
+        <member name="M:create_tests.WebAPI.AppConfiguration.ApplicationExtensions.AppExtensions.UseSerilogConfiguration(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Use serilog configuration
+            </summary>
+            <param name="app"></param>
         </member>
         <member name="M:create_tests.WebAPI.AppConfiguration.ApplicationExtensions.AppExtensions.UseSwaggerConfiguration(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
             <summary>
@@ -43,6 +43,22 @@
             Configure versioning
             </summary>
             <param name="services"></param>
+        </member>
+        <member name="T:TrainTimetable.WebAPI.Controllers.TrainsController">
+            <summary>
+            Doctors endpoints
+            </summary>
+        </member>
+        <member name="M:TrainTimetable.WebAPI.Controllers.TrainsController.#ctor(create_test.Repository.IRepository{create_test.Entities.Models.User})">
+            <summary>
+            Trains controller
+            </summary>
+        </member>
+        <member name="M:TrainTimetable.WebAPI.Controllers.TrainsController.GetTrains">
+            <summary>
+            Get trains
+            </summary>
+            <returns></returns>
         </member>
     </members>
 </doc>
