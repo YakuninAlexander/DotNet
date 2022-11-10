@@ -14,14 +14,14 @@ namespace TrainTimetable.WebAPI.Controllers
     [ApiVersion("1.0")]
     [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
-    public class TrainsController : ControllerBase
+    public class UsersController : ControllerBase
     {
         private IRepository<User> _repository;
 
         /// <summary>
         /// Trains controller
         /// </summary>
-        public TrainsController(IRepository<User> repository)
+        public UsersController(IRepository<User> repository)
         {
             _repository = repository;
         }
@@ -31,15 +31,15 @@ namespace TrainTimetable.WebAPI.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        public IActionResult GetTrains()
+        public IActionResult GetUsers()
         {
-            var train1 = new User()
+            var user1 = new User()
             {
                 Login = "Sasha",
                 PasswordHash = "Moscow",
             };
 
-            var train2 = new User()
+            var user2 = new User()
             {
                 Login = "Masha",
                 PasswordHash = "Moscow",
@@ -47,8 +47,8 @@ namespace TrainTimetable.WebAPI.Controllers
 
             try
             {
-                train1 = _repository.Save(train1);
-                train2 = _repository.Save(train2);
+                user1 = _repository.Save(user1);
+                user2 = _repository.Save(user2);
             }
             catch(Exception e)
             {
