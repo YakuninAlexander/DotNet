@@ -146,6 +146,132 @@
         }
       }
     },
+    "/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-test.Services/create-test.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-test.Services/create-test.Services.csproj",
+        "projectName": "create-test.Services",
+        "projectPath": "/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-test.Services/create-test.Services.csproj",
+        "packagesPath": "/Users/alexander/.nuget/packages/",
+        "outputPath": "/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-test.Services/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/alexander/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-test.Entities/create-test.Entities.csproj": {
+                "projectPath": "/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-test.Entities/create-test.Entities.csproj"
+              },
+              "/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-test.Repository/create-test.Repository.csproj": {
+                "projectPath": "/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-test.Repository/create-test.Repository.csproj"
+              },
+              "/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-test.Shared/create-test.Shared.csproj": {
+                "projectPath": "/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-test.Shared/create-test.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-test.Shared/create-test.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-test.Shared/create-test.Shared.csproj",
+        "projectName": "create-test.Shared",
+        "projectPath": "/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-test.Shared/create-test.Shared.csproj",
+        "packagesPath": "/Users/alexander/.nuget/packages/",
+        "outputPath": "/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-test.Shared/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/alexander/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-tests.WebAPI/create-tests.WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -173,6 +299,12 @@
               },
               "/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-test.Repository/create-test.Repository.csproj": {
                 "projectPath": "/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-test.Repository/create-test.Repository.csproj"
+              },
+              "/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-test.Services/create-test.Services.csproj": {
+                "projectPath": "/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-test.Services/create-test.Services.csproj"
+              },
+              "/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-test.Shared/create-test.Shared.csproj": {
+                "projectPath": "/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-test.Shared/create-test.Shared.csproj"
               }
             }
           }
@@ -187,6 +319,22 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.2.2, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[11.2.2, )"
+            },
             "Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer": {
               "target": "Package",
               "version": "[5.0.0, )"
@@ -218,6 +366,10 @@
             "Serilog.Expressions": {
               "target": "Package",
               "version": "[3.4.1, )"
+            },
+            "Serilog.Sinks.Seq": {
+              "target": "Package",
+              "version": "[5.2.1, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

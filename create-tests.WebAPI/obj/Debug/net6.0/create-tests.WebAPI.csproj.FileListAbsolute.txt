@@ -55,3 +55,13 @@
 /Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-tests.WebAPI/bin/Debug/net6.0/create-test.Repository.pdb
 /Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-tests.WebAPI/bin/Debug/net6.0/Npgsql.dll
 /Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-tests.WebAPI/bin/Debug/net6.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
+/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-tests.WebAPI/bin/Debug/net6.0/AutoMapper.dll
+/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-tests.WebAPI/bin/Debug/net6.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-tests.WebAPI/bin/Debug/net6.0/FluentValidation.dll
+/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-tests.WebAPI/bin/Debug/net6.0/FluentValidation.DependencyInjectionExtensions.dll
+/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-tests.WebAPI/bin/Debug/net6.0/Serilog.Sinks.PeriodicBatching.dll
+/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-tests.WebAPI/bin/Debug/net6.0/Serilog.Sinks.Seq.dll
+/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-tests.WebAPI/bin/Debug/net6.0/create-test.Services.dll
+/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-tests.WebAPI/bin/Debug/net6.0/create-test.Shared.dll
+/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-tests.WebAPI/bin/Debug/net6.0/create-test.Services.pdb
+/Users/alexander/Projects/CSharp/DotNetLab/DotNet/create-tests.WebAPI/bin/Debug/net6.0/create-test.Shared.pdb

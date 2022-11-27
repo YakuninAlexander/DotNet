@@ -1,14 +1,13 @@
-using System.Globalization;
-using System.Reflection.Metadata;
-using System.Runtime.InteropServices;
-using create_test.Entities.Models;
-using create_test.Repository;
+using AutoMapper;
+using create_test.Services.Abstract;
+using create_test.Services.Models;
+using create_tests.WebAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace create_tests.WebAPI.Controllers
+namespace create_tests.Controllers
 {
     /// <summary>
-    /// Doctors endpoints
+    /// Users endpoints
     /// </summary>
     [ProducesResponseType(200)]
     [ApiVersion("1.0")]
@@ -16,47 +15,87 @@ namespace create_tests.WebAPI.Controllers
     [ApiController]
     public class UsersController : ControllerBase
     {
-        private IRepository<User> _repository;
+        private readonly IUserService userService;
+        private readonly IMapper mapper;
 
         /// <summary>
         /// Users controller
         /// </summary>
-        public UsersController(IRepository<User> repository)
+        public UsersController(IUserService userService, IMapper mapper)
         {
-            _repository = repository;
+            this.userService = userService;
+            this.mapper = mapper;
         }
-
         /// <summary>
-        /// Get users
+        /// Get users by pages
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        public IActionResult GetUsers()
+        public IActionResult GetUsers([FromQuery] int limit = 20, [FromQuery] int offset = 0)
         {
-            var user1 = new User()
-            {
-                Login = "Sasha",
-                PasswordHash = "Moscow",
-            };
+            var pageModel = userService.GetUsers(limit, offset);
+            return Ok(mapper.Map<PageResponse<UserPreviewResponse>>(pageModel));
+        }
 
-            var user2 = new User()
-            {
-                Login = "Masha",
-                PasswordHash = "Moscow",
-            };
 
+        /// <summary>
+        /// Update user
+        /// </summary>
+        [HttpPut]
+        [Route("{id}")]
+        public IActionResult UpdateUser([FromRoute] Guid id, [FromBody] UpdateUserRequest model)
+        {
+            var validationResult = model.Validate();
+            if (!validationResult.IsValid)
+            {
+                return BadRequest(validationResult.Errors);
+            }
             try
             {
-                user1 = _repository.Save(user1);
-                user2 = _repository.Save(user2);
+                var resultModel = userService.UpdateUser(id, mapper.Map<UpdateUserModel>(model));
+
+                return Ok(mapper.Map<UserResponse>(resultModel));
             }
-            catch(Exception e)
+            catch (Exception ex)
             {
-
+                return BadRequest(ex.ToString());
             }
+        }
 
-            var users = _repository.GetAll();
-            return Ok(users);
+        /// <summary>
+        /// Delete user
+        /// </summary>
+        [HttpDelete]
+        [Route("{id}")]
+        public IActionResult DeleteUser([FromRoute] Guid id)
+        {
+            try
+            {
+                userService.DeleteUser(id);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
+        }
+
+        /// <summary>
+        /// Get user
+        /// </summary>
+        [HttpGet]
+        [Route("{id}")]
+        public IActionResult GetUser([FromRoute] Guid id)
+        {
+            try
+            {
+                var userModel = userService.GetUser(id);
+                return Ok(mapper.Map<UserResponse>(userModel));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
         }
     }
 }

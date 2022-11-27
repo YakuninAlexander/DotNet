@@ -26,6 +26,12 @@
             Services extensions
             </summary>
         </member>
+        <member name="M:create_tests.WebAPI.AppConfiguration.ServicesExtensions.ServicesExtensions.AddMapperConfiguration(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Add serilog configuration
+            </summary>
+            <param name="builder"></param>
+        </member>
         <member name="M:create_tests.WebAPI.AppConfiguration.ServicesExtensions.ServicesExtensions.AddSerilogConfiguration(Microsoft.AspNetCore.Builder.WebApplicationBuilder)">
             <summary>
             Add serilog configuration
@@ -44,21 +50,129 @@
             </summary>
             <param name="services"></param>
         </member>
-        <member name="T:TrainTimetable.WebAPI.Controllers.UsersController">
+        <member name="T:create_tests.Controllers.QuestionsController">
             <summary>
-            Doctors endpoints
+            Questions endpoints
             </summary>
         </member>
-        <member name="M:TrainTimetable.WebAPI.Controllers.UsersController.#ctor(create_test.Repository.IRepository{create_test.Entities.Models.User})">
+        <member name="M:create_tests.Controllers.QuestionsController.#ctor(create_test.Services.Abstract.IQuestionService,AutoMapper.IMapper)">
             <summary>
-            Trains controller
+            Questions controller
             </summary>
         </member>
-        <member name="M:TrainTimetable.WebAPI.Controllers.UsersController.GetUsers">
+        <member name="M:create_tests.Controllers.QuestionsController.GetQuestions(System.Int32,System.Int32)">
             <summary>
-            Get trains
+            Get questions by pages
             </summary>
             <returns></returns>
+        </member>
+        <member name="M:create_tests.Controllers.QuestionsController.UpdateQuestion(System.Guid,create_tests.WebAPI.Models.UpdateQuestionRequest)">
+            <summary>
+            Update question
+            </summary>
+        </member>
+        <member name="M:create_tests.Controllers.QuestionsController.DeleteQuestion(System.Guid)">
+            <summary>
+            Delete question
+            </summary>
+        </member>
+        <member name="M:create_tests.Controllers.QuestionsController.GetQuestion(System.Guid)">
+            <summary>
+            Get question
+            </summary>
+        </member>
+        <member name="T:create_tests.Controllers.StatisticsController">
+            <summary>
+            Statistics endpoints
+            </summary>
+        </member>
+        <member name="M:create_tests.Controllers.StatisticsController.#ctor(create_test.Services.Abstract.IStatisticService,AutoMapper.IMapper)">
+            <summary>
+            Statistics controller
+            </summary>
+        </member>
+        <member name="M:create_tests.Controllers.StatisticsController.GetStatistics(System.Int32,System.Int32)">
+            <summary>
+            Get statistics by pages
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:create_tests.Controllers.StatisticsController.UpdateStatistic(System.Guid,create_tests.WebAPI.Models.UpdateStatisticRequest)">
+            <summary>
+            Update statistic
+            </summary>
+        </member>
+        <member name="M:create_tests.Controllers.StatisticsController.DeleteStatistic(System.Guid)">
+            <summary>
+            Delete statistic
+            </summary>
+        </member>
+        <member name="M:create_tests.Controllers.StatisticsController.GetStatistic(System.Guid)">
+            <summary>
+            Get statistic
+            </summary>
+        </member>
+        <member name="T:create_tests.Controllers.UsersController">
+            <summary>
+            Users endpoints
+            </summary>
+        </member>
+        <member name="M:create_tests.Controllers.UsersController.#ctor(create_test.Services.Abstract.IUserService,AutoMapper.IMapper)">
+            <summary>
+            Users controller
+            </summary>
+        </member>
+        <member name="M:create_tests.Controllers.UsersController.GetUsers(System.Int32,System.Int32)">
+            <summary>
+            Get users by pages
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:create_tests.Controllers.UsersController.UpdateUser(System.Guid,create_tests.WebAPI.Models.UpdateUserRequest)">
+            <summary>
+            Update user
+            </summary>
+        </member>
+        <member name="M:create_tests.Controllers.UsersController.DeleteUser(System.Guid)">
+            <summary>
+            Delete user
+            </summary>
+        </member>
+        <member name="M:create_tests.Controllers.UsersController.GetUser(System.Guid)">
+            <summary>
+            Get user
+            </summary>
+        </member>
+        <member name="T:TestTimetable.Controllers.TestsController">
+            <summary>
+            Tests endpoints
+            </summary>
+        </member>
+        <member name="M:TestTimetable.Controllers.TestsController.#ctor(create_test.Services.Abstract.ITestService,AutoMapper.IMapper)">
+            <summary>
+            Tests controller
+            </summary>
+        </member>
+        <member name="M:TestTimetable.Controllers.TestsController.GetTests(System.Int32,System.Int32)">
+            <summary>
+            Get Tests by pages
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TestTimetable.Controllers.TestsController.UpdateTest(System.Guid,create_tests.WebAPI.Models.UpdateTestRequest)">
+            <summary>
+            Update Test
+            </summary>
+        </member>
+        <member name="M:TestTimetable.Controllers.TestsController.DeleteTest(System.Guid)">
+            <summary>
+            Delete Test
+            </summary>
+        </member>
+        <member name="M:TestTimetable.Controllers.TestsController.GetTest(System.Guid)">
+            <summary>
+            Get Test
+            </summary>
         </member>
     </members>
 </doc>
