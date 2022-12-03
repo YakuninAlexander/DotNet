@@ -37,6 +37,28 @@ namespace create_tests.Controllers
             return Ok(mapper.Map<PageResponse<QuestionPreviewResponse>>(pageModel));
         }
 
+        /// <summary>
+        /// Create Question
+        /// </summary>
+        [HttpPost]
+        public IActionResult CreateQuestion([FromBody] CreateQuestionRequest model)
+        {
+            var validationResult = model.Validate();
+            if (!validationResult.IsValid)
+            {
+                return BadRequest(validationResult.Errors);
+            }
+            try
+            {
+                var resultModel = questionService.CreateQuestion(mapper.Map<CreateQuestionModel>(model));
+
+                return Ok(mapper.Map<QuestionResponse>(resultModel));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
+        }
 
         /// <summary>
         /// Update question

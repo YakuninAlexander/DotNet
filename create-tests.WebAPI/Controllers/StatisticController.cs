@@ -63,6 +63,29 @@ namespace create_tests.Controllers
         }
 
         /// <summary>
+        /// Create Statistic
+        /// </summary>
+        [HttpPost]
+        public IActionResult CreateStatistic([FromBody] CreateStatisticRequest model)
+        {
+            var validationResult = model.Validate();
+            if (!validationResult.IsValid)
+            {
+                return BadRequest(validationResult.Errors);
+            }
+            try
+            {
+                var resultModel = statisticService.CreateStatistic(mapper.Map<CreateStatisticModel>(model));
+
+                return Ok(mapper.Map<StatisticResponse>(resultModel));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
+        }
+
+        /// <summary>
         /// Delete statistic
         /// </summary>
         [HttpDelete]

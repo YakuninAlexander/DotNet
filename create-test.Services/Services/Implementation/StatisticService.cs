@@ -8,10 +8,15 @@ namespace create_test.Services.Implementation;
 
 public class StatisticService : IStatisticService
 {
+
     private readonly IRepository<Statistic> statisticsRepository;
+    private readonly IRepository<User> usersRepository;
+    private readonly IRepository<Test> testsRepository;
     private readonly IMapper mapper;
-    public StatisticService(IRepository<Statistic> statisticsRepository, IMapper mapper)
+    public StatisticService(IRepository<Statistic> statisticsRepository, IRepository<Test> testsRepository, IRepository<User> usersRepository, IMapper mapper)
     {
+        this.testsRepository = testsRepository;
+        this.usersRepository = usersRepository;
         this.statisticsRepository = statisticsRepository;
         this.mapper = mapper;
     }
@@ -48,6 +53,23 @@ public class StatisticService : IStatisticService
             Items = mapper.Map<IEnumerable<StatisticModel>>(chunk),
             TotalCount = totalCount
         };
+    }
+
+    public StatisticModel CreateStatistic(CreateStatisticModel statistic)
+    {
+        if (testsRepository.GetById(statistic.TestId) == null)
+        {
+            throw new Exception("Test not existing!");
+        }
+        if (usersRepository.GetById(statistic.TestId) == null) 
+        {
+            throw new Exception("User not existing");
+        }
+        
+        var savedStatistic = mapper.Map<Statistic>(statistic);
+        statisticsRepository.Save(savedStatistic);
+        
+        return mapper.Map<StatisticModel>(savedStatistic);
     }
 
     public StatisticModel UpdateStatistic(Guid id, UpdateStatisticModel statistic)

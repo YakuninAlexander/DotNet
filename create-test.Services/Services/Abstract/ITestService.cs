@@ -8,6 +8,8 @@ public interface ITestService
 
     TestModel UpdateTest(Guid id, UpdateTestModel test);
 
+    TestModel CreateTest(CreateTestModel test);
+
     void DeleteTest(Guid id);
 
     PageModel<TestModel> GetTests(int limit = 20, int offset = 0);

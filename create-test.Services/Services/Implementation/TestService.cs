@@ -8,15 +8,31 @@ namespace create_test.Services.Implementation;
 
 public class TestService : ITestService
 {
+
+    private readonly IRepository<User> usersRepository;
     private readonly IRepository<Test> testsRepository;
     private readonly IMapper mapper;
-    public TestService(IRepository<Test> testsRepository, IMapper mapper)
+    public TestService(IRepository<Test> testsRepository, IRepository<User> usersRepository, IMapper mapper)
     {
+        this.usersRepository = usersRepository;
         this.testsRepository = testsRepository;
         this.mapper = mapper;
     }
 
-    public void DeleteTest(Guid id)
+  public TestModel CreateTest(CreateTestModel test)
+  {
+    if (usersRepository.GetById(test.UserID) == null)
+    {
+        throw new Exception("User not existing!");
+    }
+    
+    var savedTest = mapper.Map<Test>(test);
+    testsRepository.Save(savedTest);
+    
+    return mapper.Map<TestModel>(savedTest);
+  }
+
+  public void DeleteTest(Guid id)
     {
         var testToDelete = testsRepository.GetById(id);
         if (testToDelete == null)

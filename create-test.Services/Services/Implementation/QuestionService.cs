@@ -9,9 +9,11 @@ namespace create_test.Services.Implementation;
 public class QuestionService : IQuestionService
 {
     private readonly IRepository<Questions> questionsRepository;
+    private readonly IRepository<Test> testsRepository;
     private readonly IMapper mapper;
-    public QuestionService(IRepository<Questions> questionsRepository, IMapper mapper)
+    public QuestionService(IRepository<Questions> questionsRepository, IRepository<Test> testsRepository, IMapper mapper)
     {
+        this.testsRepository = testsRepository;
         this.questionsRepository = questionsRepository;
         this.mapper = mapper;
     }
@@ -48,6 +50,19 @@ public class QuestionService : IQuestionService
             Items = mapper.Map<IEnumerable<QuestionModel>>(chunk),
             TotalCount = totalCount
         };
+    }
+
+    public QuestionModel CreateQuestion(CreateQuestionModel question)
+    {
+        if (testsRepository.GetById(question.TestID) == null)
+        {
+            throw new Exception("Test not existing!");
+        }
+        
+        var savedQuestion = mapper.Map<Questions>(question);
+        questionsRepository.Save(savedQuestion);
+        
+        return mapper.Map<QuestionModel>(savedQuestion);
     }
 
     public QuestionModel UpdateQuestion(Guid id, UpdateQuestionModel question)

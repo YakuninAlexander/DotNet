@@ -4,6 +4,7 @@ namespace create_test.Services.Abstract;
 
 public interface IStatisticService
 {
+    StatisticModel CreateStatistic(CreateStatisticModel statistic);
     StatisticModel GetStatistic(Guid id);
 
     StatisticModel UpdateStatistic(Guid id, UpdateStatisticModel statistic);

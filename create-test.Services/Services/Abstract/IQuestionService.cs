@@ -4,6 +4,7 @@ namespace create_test.Services.Abstract;
 
 public interface IQuestionService
 {
+    QuestionModel CreateQuestion(CreateQuestionModel question);
     QuestionModel GetQuestion(Guid id);
 
     QuestionModel UpdateQuestion(Guid id, UpdateQuestionModel question);

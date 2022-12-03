@@ -97,5 +97,28 @@ namespace TestTimetable.Controllers
                 return BadRequest(ex.ToString());
             }
         }
+
+        /// <summary>
+        /// Create Test
+        /// </summary>
+        [HttpPost]
+        public IActionResult CreateTest([FromBody] CreateTestRequest model)
+        {
+            var validationResult = model.Validate();
+            if (!validationResult.IsValid)
+            {
+                return BadRequest(validationResult.Errors);
+            }
+            try
+            {
+                var resultModel = testService.CreateTest(mapper.Map<CreateTestModel>(model));
+
+                return Ok(mapper.Map<TestResponse>(resultModel));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
+        }
     }
 }

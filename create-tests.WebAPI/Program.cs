@@ -4,6 +4,8 @@ using Serilog;
 using create_test.Entities;
 using Microsoft.EntityFrameworkCore;
 using create_test.Repository;
+using create_test.Services.Abstract;
+using create_test.Services.Implementation;
 
 var configuration = new ConfigurationBuilder()
 .AddJsonFile("appsettings.json", optional: false)
@@ -21,7 +23,6 @@ builder.Services.AddSwaggerConfiguration(); //add swagger configuration
 
 builder.Services.AddScoped<DbContext, Context>();
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
-
 var app = builder.Build();
 
 app.UseSerilogConfiguration(); 
